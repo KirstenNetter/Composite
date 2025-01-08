@@ -28,3 +28,5 @@ if __name__ == "__main__":
 
     print("\nTotal items in root:", root.count_items())
     print("Total size of files in root:", root.calculate_size(), "KB")
+    print("Total size of files in subfolder1:", subfolder1.calculate_size(), "KB")
+    print("Total size of files in subfolder2:", subfolder2.calculate_size(), "KB")
