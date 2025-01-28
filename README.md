@@ -84,20 +84,28 @@ class Composite(Component):
 Weil Leaves und Composite-Objekte beide von der gemeinsamen Basisklasse erben, können sie einheitlich behandelt werden. Test dies ggf. anhand des folgenden Codes:
 
 ```python
-class Composite(Component):
-    def __init__(self, name):
-        super().__init__(name)
-        self.children = []
+from src.leaf import Leaf
+from src.composite import Composite
 
-    def add(self, component):
-        self.children.append(component)
+def main():
+    try:
+        leaf1 = Leaf("Leaf1", 10)
+        leaf2 = Leaf("Leaf2", 20)
+        print(leaf1.operation())   
+        print(leaf2.operation())   
 
-    def remove(self, component):
-        self.children.remove(component)
+        composite = Composite("Root")
+        composite.add(leaf1)
+        composite.add(leaf2)
+        sub_composite = Composite("Sub")
+        sub_composite.add(Leaf("Leaf3", 30))
+        composite.add(sub_composite)
 
-    def operation(self):
-        result = f"Composite {self.name} contains:\n"
-        for child in self.children:
-            result += f"  {child.operation()}\n"
-        return result
+        print(composite.operation())
+        
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+if __name__ == "__main__":
+    main()
 ```
