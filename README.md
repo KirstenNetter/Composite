@@ -1,6 +1,6 @@
 # Das Composite-Entwurfsmuster
 
-Dieses Projekt demonstriert das zugrundeliegende Prinzip des Composite-Entwurfsmusters.
+[Dieses Github-Projekt](https://github.com/KirstenNetter/Composite) demonstriert das zugrundeliegende Prinzip des Composite-Entwurfsmusters.
 
 Das Composite-Entwurfsmuster wird verwendet, um hierarchische Strukturen zu modellieren, in denen es sinnvoll ist, Einzelobjekte und zusammengesetzte Objekte einheitlich behandeln zu können. Ein häufiges Anwendungsbeispiel, das auch im vorliegenden Projekt verwendet wird, ist ein Dateisystem, das Dateien und Ordner organisiert. 
 
