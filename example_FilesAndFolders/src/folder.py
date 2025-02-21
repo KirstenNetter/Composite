@@ -18,7 +18,7 @@ class Folder(FileSystemNode):
             child.display(indent + 2)
 
     def count_items(self):
-        total_count = 0
+        total_count = 1
         for child in self.children:
             total_count += child.count_items()
         return total_count
